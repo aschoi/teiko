@@ -64,3 +64,16 @@ time 7:     29.31
 time 14:    30.01  
 
 Non-responders stay relatively flat, but responders over the course of 14 (time intervals. days?) have a cd 4 t-cell percentage rise delta of 0.88 and 0.83 for a total of 1.71. This isn't necessarily a big delta, but its also not nothing. Its at least enough to make it worth mentioning. 
+
+
+## Data Subset Analysis  
+Conditions  
+- projcts: all projects  
+- condition: melanoma  
+- treatment: miraclib  
+- response: yes  
+- sample type: PBMC  
+- time: 0  
+- sex: M  
+
+b_cell count avg: 10,401.28

@@ -149,8 +149,15 @@ df_long = df_long.sort_values(by=["sample", "population"]).reset_index(drop=True
 # Section 1: Summary stats
 # ----------------------------
 st.subheader("Summary Statistics")
-summary = df_long.groupby("population")["percentage"].agg(["mean", "std", "min", "max"]).round(2)
-summary.columns = ["Mean %", "Std %", "Min %", "Max %"]
+summary = df_long.groupby("population").agg(
+    avg_count=("count", "mean"),
+    mean_pct=("percentage", "mean"),
+    std_pct=("percentage", "std"),
+    min_pct=("percentage", "min"),
+    max_pct=("percentage", "max")
+).round(2)
+
+summary.columns = ["Avg Count", "Mean %", "Std %", "Min %", "Max %"]
 st.dataframe(summary)
 
 
