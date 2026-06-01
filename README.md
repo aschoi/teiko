@@ -48,7 +48,7 @@ samples:
 
 A major engineering decision and tradeoff comes from deciding between performance vs storage. As a db scales, one option would be to have fewer tables, which would increase overall performance, because not as many joins would be needed. However this approach suffers in two ways. First, storage capacity starts to become a concern. Second, if data within a table or column needs to be updated, it could lead to "missed updates" which in turn leads to db inconsistency. If we care about ensuring these two problems, storage limits and inconsistency, occur infrequently, then we could instead split our data up into many more tables. This approach can suffer though, because that means in order to retrieve data, more joins will be needed during execution, which in turn creates performance issues. The approach I've chosen here attempts to strike the balance between performance and storage concerns, though I'm sure it could be improved upon.  
 
-When make dashboard is executed, this is the dashboard link:  
+When `make dashboard` is executed, this is the dashboard link:  
 http://localhost:8501/  
 
 I also want to mention, I used Claude and ChatGPT for some of the SQL syntax and heavily for the streamlit dashboard. The specific workflow that was asked of me during this assessment was new to me. While I truly believe I would be able to grok this workflow quickly given just a little time, since this was the first time I've seen this particular type of workflow, I needed the additional assistance, especially when it came to syntax and terminology.  
@@ -86,4 +86,4 @@ Conditions
 - time: 0  
 - sex: M  
 
-b_cell count avg: 10,401.28
+**b_cell count avg: 10,401.28**
